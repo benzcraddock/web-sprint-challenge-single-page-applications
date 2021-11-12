@@ -73,15 +73,20 @@ const App = () => {
         <br />
         <Link to="/pizza">Order</Link>
       </div>
-
       <Switch>
         <Route path="/pizza">
-          <Form 
+          <Form id="order-pizza"
             values={formValues}
             errors={formErrors}
             change={handleChange}
             submit={handleSubmit}
           />
+          {orders.map(order => {
+            <div key={order.id}>
+              <p>{order.createdAt}</p>
+              <p>{order.username}</p>
+            </div>
+          })}
         </Route>
         <Route exact path="/">
           <Home />

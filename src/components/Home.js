@@ -16,6 +16,7 @@ const Home = () => {
                 src='../Assets/Pizza.jpg'
                 alt='Pizza'
             />
+            <br />
             <button
                 onClick={routeToShop}
                 className='shop-button'
