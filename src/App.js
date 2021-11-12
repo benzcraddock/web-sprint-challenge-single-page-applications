@@ -71,11 +71,11 @@ const App = () => {
       <div className='nav-links'>
         <Link to="/">Home</Link>
         <br />
-        <Link to="/pizza">Order</Link>
+        <Link to="/pizza" id="order-pizza">Order</Link>
       </div>
       <Switch>
         <Route path="/pizza">
-          <Form id="order-pizza"
+          <Form
             values={formValues}
             errors={formErrors}
             change={handleChange}
