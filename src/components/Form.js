@@ -39,9 +39,9 @@ const Form = (props) => {
           <label>
             <select value={size} name="size" onChange={onChange}>
               <option value=''>Select</option>
-              <option value="Small">Small</option>
-              <option value="Medium">Small</option>
-              <option value="Large">Small</option>
+              <option value='small'>Small</option>
+              <option value='medium'>Small</option>
+              <option value='large'>Small</option>
             </select>
           </label>
         </div>
@@ -133,15 +133,15 @@ const Form = (props) => {
           <label>
             <input
               value={special}
-              name="special"
+              name='special'
               onChange={onChange}
-              type="text"
+              type='text'
             />
           </label>
         </div>
 
         <div className='submit'>
-          
+          <button disabled={disabled}>Add to Order</button>
         </div>
       </form>
     </div>
