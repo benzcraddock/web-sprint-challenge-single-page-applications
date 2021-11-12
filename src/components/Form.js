@@ -140,7 +140,7 @@ const Form = (props) => {
         </div>
 
         <div className='submit'>
-          <button disabled={disabled}>Add to Order</button>
+          <button id="button" disabled={disabled}>Add to Order</button>
         </div>
       </form>
     </div>
