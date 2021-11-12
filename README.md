@@ -35,8 +35,17 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
+
+React's 'useRouteMatch' is a hook provided by React Router that allows us to add nested routes to our applications. Basically, useRouteMatch makes it easier for us to build relative route paths and link locations, such that we can change a single parameter in the URL without having to change the whole thing.
+
 1. How would you explain form validation to someone who has never programmed before?
+
+Form validation is the process of checking if information provided by a user is correct and meets certain requirements. For example, form validation may check to see if the password provided by a user is minimum 6 characters long.
+
 1. In 1-2 sentences, define end to end testing.
+
+End to end testing (E2E) looks at the whole user experience from end to end, and sees if a user can accomplish an action. E2E testing focuses on UI and mimics how a user may interact with an application by simulating actions like button clicks and form submits.
+
 
 ## Instructions
 
@@ -81,9 +90,9 @@ there is a key for each of the toppings and they are booleans
 
 Implement the following tests in Cypress:
 
-- [ ] test that you can add text to the box
-- [ ] test that you can select multiple toppings
-- [ ] test that you can submit the form
+- [X] test that you can add text to the box
+- [X] test that you can select multiple toppings
+- [X] test that you can submit the form
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
