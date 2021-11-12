@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import './App.css';
 
 // router
@@ -6,12 +6,14 @@ import { Link, Route } from 'react-router-dom';
 
 // import home and form
 import Home from './components/Home';
-import Form from "./components/Form";
+import Form from './components/Form';
 
 // import yup and schema
+import schema from './validation/formSchema';
+import * as yup from 'yup';
 
 // import axios
-import axios from "axios";
+import axios from 'axios';
 
 // initial states
 const initialFormValues = {
@@ -51,7 +53,16 @@ const App = () => {
       .finally(() => setFormValues(initialFormValues));
   }
 
-  const handleChange = ()
+  const validate = (name, value) => {
+    yup.reach(schema, name).validate(value)
+      .then(() => setFormErrors({...formErrors, [name]: ''}))
+      .catch(err => setFormErrors({...formErrors, [name]: err.errors[0]}))
+  }
+
+  const handleChange = (name, value) => {
+    validate(name, value);
+    setFormValues({...formValues, [name]: value})
+  }
 
   return (
     <div className="App">
@@ -68,9 +79,15 @@ const App = () => {
         <Home />
       </Route>
       <Route path="/pizza">
-        <Form />
+        <Form 
+          values={formValues}
+          errors={formErrors}
+          change={handleChange}
+          submit={handleSubmit}
+        />
       </Route>
     </div>
   );
 };
+
 export default App;
