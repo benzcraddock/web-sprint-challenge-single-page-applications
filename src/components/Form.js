@@ -18,8 +18,8 @@ const Form = (props) => {
 
   return (
     <div>
-      <form className='form container' onSubmit={onSubmit}>
-        <div className='form input'>
+      <form id="pizza-form" onSubmit={onSubmit}>
+        <div id="name-input">
           <h3>Enter your Name</h3>
           <p>{errors.username}</p>
           <label>
@@ -32,7 +32,7 @@ const Form = (props) => {
           </label>
         </div>
 
-        <div className='form input'>
+        <div id='size-dropdown'>
           <h3>Choice of Size</h3>
           <p>{errors.size}</p>
           <label>
@@ -126,7 +126,7 @@ const Form = (props) => {
           </label>
         </div>
 
-        <div className='form input'>
+        <div id='special-text'>
           <h3>Special Instructions</h3>
           <p>{errors.special}</p>
           <label>
