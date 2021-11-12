@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 // router
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 
 // import home and form
 import Home from './components/Home';
@@ -68,24 +68,25 @@ const App = () => {
     <div className="App">
       <h1>Lambda Eats</h1>
       <h2>The Website that Allows You to Build Your Own Pizza</h2>
-      <div className="form-wrapper">
-        
-      </div>
       <div className='nav-links'>
         <Link to="/">Home</Link>
+        <br />
         <Link to="/pizza">Order</Link>
       </div>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route path="/pizza">
-        <Form 
-          values={formValues}
-          errors={formErrors}
-          change={handleChange}
-          submit={handleSubmit}
-        />
-      </Route>
+
+      <Switch>
+        <Route path="/pizza">
+          <Form 
+            values={formValues}
+            errors={formErrors}
+            change={handleChange}
+            submit={handleSubmit}
+          />
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+      </Switch>
     </div>
   );
 };

@@ -6,7 +6,7 @@ const Home = () => {
     const history = useHistory();
 
     const routeToShop = () => {
-        history.push('/Form');
+        history.push('/pizza');
     }
 
     return (
@@ -20,7 +20,7 @@ const Home = () => {
                 onClick={routeToShop}
                 className='shop-button'
             >
-                Order your pizza!
+                Pizza?
             </button>
         </div>
     )

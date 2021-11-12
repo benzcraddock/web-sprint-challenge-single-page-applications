@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link, useRouteMatch } from 'react-router-dom';
 
 const Form = (props) => {
 
@@ -40,8 +39,8 @@ const Form = (props) => {
             <select value={size} name="size" onChange={onChange}>
               <option value=''>Select</option>
               <option value='small'>Small</option>
-              <option value='medium'>Small</option>
-              <option value='large'>Small</option>
+              <option value='medium'>Medium</option>
+              <option value='large'>Large</option>
             </select>
           </label>
         </div>
