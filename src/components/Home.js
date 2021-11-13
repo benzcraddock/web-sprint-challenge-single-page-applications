@@ -15,7 +15,7 @@ const Home = () => {
             <img
                 className='home-image'
                 src='../Assets/Pizza.jpg'
-                alt='Pizza'
+                alt='pizza'
             />
             <br />
             <button

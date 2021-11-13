@@ -17,6 +17,10 @@
   font-size: 24px;
 }
 
+p {
+  color: red;
+}
+
 button {
   margin: 5%;
   padding: 8px;

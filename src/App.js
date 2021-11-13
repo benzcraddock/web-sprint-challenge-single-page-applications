@@ -81,17 +81,17 @@ const App = () => {
             change={handleChange}
             submit={handleSubmit}
           />
-          {/* {orders.map(order => {
-            <div key={order.id}>
-              <p>{order.createdAt}</p>
-              <p>{order.username}</p>
-            </div>
-          })} */}
         </Route>
         <Route exact path="/">
           <Home />
         </Route>
       </Switch>
+      {orders.map(order => {
+        <div key={order.id}>
+          <p>{order.createdAt}</p>
+          <p>{order.username}</p>
+        </div>
+      })}
     </div>
   );
 };
